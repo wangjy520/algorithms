@@ -1,0 +1,63 @@
+/* 
+** Created by Wangjy.
+** 
+** 
+** 
+*/ 
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long LL;
+typedef unsigned long long ULL;
+typedef pair<int, int> pii;
+typedef pair<long long, long long> pll;
+const int dirs[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+struct DSU
+{
+	vector<int> p, r;
+	DSU(int n) : p(n), r(n, 0) {iota(p.begin(), p.end(), 0);}
+	int find(int x) {
+		return x == p[x] ? x : (p[x] = find(p[x]));
+	}
+	bool same(int x, int y) {return find(x) == find(y);}
+	void merge(int x, int y) {
+		x = find(x);
+		y = find(y);
+		if(r[x] < r[y])
+			p[x] = y;
+		else
+			p[y] = x;
+		if(x != y && r[x] == r[y])
+			r[x]++;
+	}
+};
+
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int n;
+	cin >> n;
+	DSU dsu(n + 1);
+	vector<int> nums(n + 1), d(n + 1);
+	for(int i = 1;i <= n;i++) {
+		cin >> nums[i];
+	}
+	for(int i = 1;i <= n;i++) {
+		cin >> d[i];
+		if(i - d[i] >= 1)
+			dsu.merge(i - d[i], i);
+		if(i + d[i] <= n)
+			dsu.merge(i + d[i], i);
+	}
+	for(int i = 1;i <= n;i++) {
+		if(!dsu.same(nums[i], i)) {
+			cout << "NO" << '\n';
+			return 0;
+		}
+	}
+	cout << "YES" << '\n';
+
+	return 0;
+}

@@ -1,0 +1,2 @@
+- https://leetcode.cn/problems/two-city-scheduling/
+    - 先考虑将所有的人都安排到B城市中，然后选出n个去A城市中，每个人产生的差值为costa - costb，选出最小的n个即可
