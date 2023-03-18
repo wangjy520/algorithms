@@ -3,3 +3,6 @@
 - https://ac.nowcoder.com/acm/problem/14693
     - 贪心 + 堆
     - 按照体积大小排序，用最大堆维护当前能够放入背包中的能够产生最大收益的物品，然后更新堆
+- https://leetcode.cn/contest/biweekly-contest-100/problems/maximize-greatness-of-an-array/
+    - 贪心 + 双指针
+    - 将数组复制一份排序，对于每个数字，选择第一个大于该数字的元素，直到备份数组遍历完毕
