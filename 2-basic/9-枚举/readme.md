@@ -4,3 +4,6 @@
 - [1930-长度为3的不同回文子序列](https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/)
     - 枚举 + 前后缀分解
     - 枚举中间字符，统计每个字符前面及后面每个字符的出现次数
+- https://leetcode.cn/problems/bomb-enemy/
+    - 预处理 + 枚举
+    - 预处理出每个位置上、下、左、右的最大连续敌人数量，枚举每个位置

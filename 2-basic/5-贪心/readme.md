@@ -1,2 +1,5 @@
 - https://leetcode.cn/problems/two-city-scheduling/
     - 先考虑将所有的人都安排到B城市中，然后选出n个去A城市中，每个人产生的差值为costa - costb，选出最小的n个即可
+- https://ac.nowcoder.com/acm/problem/14693
+    - 贪心 + 堆
+    - 按照体积大小排序，用最大堆维护当前能够放入背包中的能够产生最大收益的物品，然后更新堆
