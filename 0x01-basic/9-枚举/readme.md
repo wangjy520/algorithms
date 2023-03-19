@@ -7,3 +7,5 @@
 - https://leetcode.cn/problems/bomb-enemy/
     - 预处理 + 枚举
     - 预处理出每个位置上、下、左、右的最大连续敌人数量，枚举每个位置
+- https://leetcode.cn/contest/weekly-contest-337/problems/number-of-even-and-odd-bits/
+    - 位运算枚举每个位置
