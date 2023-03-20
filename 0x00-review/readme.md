@@ -7,3 +7,7 @@
   - 统计从左开始最长上升连续子序列的长度以及从右侧开始最长连续下降子序列的长度，枚举每个断点，如果`a[i + 1] - a[i - 1] >= 2`，可以修改断点`i`，更新答案为`res = max(res, left[i - 1] + right[i + 1] + 1)`
 - https://leetcode.cn/contest/biweekly-contest-100/problems/distribute-money-to-maximum-children/
   - 智商题，贪心，先给每个人分一颗糖，再分剩下的糖。注意有很多特殊情况要考虑到
+- https://leetcode.cn/problems/numbers-with-repeated-digits/
+    - 逆向思维 + 数位dp
+    - 数位dp采用记忆化搜索完成，求出没有重复数字的数字个数，然后减掉即可
+    - 对于数位dp，`is_num`表示上一个位置是否为一个数字，决定当前位置所填数字的下界，即从0开始还是从1开始；`is_limit`表示当前位置是否受到限制，决定了当前位置所填数字的上界，即是否能取到9；第一个参数为`i`，表示当前的位置；另一个参数一般是上一个及之前位置的状态或者对答案做出的贡献，这样当`i == m`的时候，这个参数恰好就是前面所有位置的总贡献，累加到答案中即可
