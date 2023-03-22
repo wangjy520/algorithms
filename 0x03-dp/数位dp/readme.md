@@ -3,3 +3,37 @@
     - 逆向思维 + 数位dp
     - 数位dp采用记忆化搜索完成，求出没有重复数字的数字个数，然后减掉即可
     - 对于数位dp，`is_num`表示上一个位置是否为一个数字，决定当前位置所填数字的下界，即从0开始还是从1开始；`is_limit`表示当前位置是否受到限制，决定了当前位置所填数字的上界，即是否能取到9；第一个参数为`i`，表示当前的位置；另一个参数一般是上一个及之前位置的状态或者对答案做出的贡献，这样当`i == m`的时候，这个参数恰好就是前面所有位置的总贡献，累加到答案中即可
+- https://ac.nowcoder.com/acm/problem/20491
+    - 分别统计每个数字的出现次数
+- https://ac.nowcoder.com/acm/problem/20268
+    - 第二维是上一个位置的数字，当`abs(pre - d) < 2`的时候不会继续向下遍历
+- https://ac.nowcoder.com/acm/problem/19888
+    - `dp[i][c][r]`表示当前位为i，第i - 1位及其前面的数字总和为c，且余数为r的情况下有多少数字符合条件
+    - 注意这里除了第一维的状态是表示的第`i`位，其余的状态表示的都是第`i - 1`及以前位置的状态
+- [0x00](https://www.luogu.com.cn/problem/P4999)
+    - `dp[i][c]`，`c`是数字之和
+- [0x01](https://www.luogu.com.cn/problem/P1836)
+    - 和上题一样
+- [0x02](https://www.luogu.com.cn/problem/P4127)
+    - 先枚举所有的可能的数字和，本题为从1到9 * 18 = 162，设为k
+    - `dp[i][c][r]`表示第i个位置，前面的和是c，前面的数字本身对k的余数
+    - 紫题（省选/NOI-）
+- [0x03](https://www.luogu.com.cn/problem/UVA1640)
+    - 没注册账号，但应该没有问题
+- [0x04](https://www.luogu.com.cn/problem/CF1036C)
+    - `dp[i][c]`表示到第i个位置，且前面的1~9的数字个数，即第二维表示以前的状态
+- [0x05](https://www.luogu.com.cn/problem/P6218)
+    - `dp[i][c][r]`表示0的个数为c，1的个数为r的状态
+- [0x06](https://www.luogu.com.cn/problem/P4124)
+    - 很多维的数组记录前面的状态，使用`memset`赋值
+- [0x07](https://www.luogu.com.cn/problem/CF855E)
+    - `dp[i][mask]`表示到第i位，mask表示每个数字出现的次数，只需要表示奇数次或者偶数次即可
+- [0x08](https://www.luogu.com.cn/problem/SP10606)
+    - `dp[i][mask][h]`表示到第i个位置，每个数字的出现次数（奇数次or偶数次），每个数字是否出现过
+    - 洛谷上的题目评测的时候有问题，但是原题过了
+    - 紫题（省选/NOI-）
+- [0x09](https://www.luogu.com.cn/problem/P3413)
+    - `dp[i][p1][p2][mask]`表示到第i位，之前的两个数字为p1、p2，是否有回文串出现
+    - 紫题
+## 总结
+- 除了第一维，剩余的维度代表的都是之前的状态
