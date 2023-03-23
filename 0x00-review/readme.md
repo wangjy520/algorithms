@@ -17,3 +17,39 @@
 - https://ac.nowcoder.com/acm/problem/20491
   - 数位dp
   - 分别统计每个数字出现的次数
+- https://www.luogu.com.cn/problem/P3372
+    - 区间修改 + 区间查询
+    - 使用两个数组维护树状数组
+    ```cpp
+    vector<int> c(n + 1, 0), d(n + 1, 0);
+
+    int lowbit(int x) {
+        return x & (-x);
+    }
+
+    void add(int i, int x) {
+        for(int j = i;j <= n;j += lowbit(j)) {
+            c[j] += x;
+            d[j] += x * (i - 1);
+        }
+    }
+
+    int sum(int i) {
+        int res = 0;
+        for(int j = i;j > 0;j -= lowbit(j)) {
+            res += i * c[j] - d[j];
+        }
+        return res;
+    }
+
+    int sum(int i, int j) {
+        return sum(j) - sum(i - 1);
+    }
+    ```
+    - 暂时看不太懂，先背下来再说吧
+    - 注意这种方式中，树状数组初始化的方式是作为差分数组进行的。而初始化差分数组有两种方式：
+    ```cpp
+    1、add(i, a[i] - a[i - 1]);
+    2、add(i, a[i]), add(i + 1, -a[i]);
+    ```
+    - 两种方式是一样的

@@ -5,3 +5,4 @@
 - https://leetcode.cn/problems/numbers-with-repeated-digits/
 - https://leetcode.cn/problems/binary-tree-inorder-traversal/
 - https://ac.nowcoder.com/acm/problem/20491
+- https://www.luogu.com.cn/problem/P3372
