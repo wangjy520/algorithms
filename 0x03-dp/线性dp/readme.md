@@ -18,3 +18,15 @@
 - https://leetcode.cn/problems/best-team-with-no-conflicts/
   - 转换成最长上升子序列问题
   - 先按照年龄为第一关键字、分数为第二关键字升序排序，`dp[i]`表示以第i个人结尾的最大分数，`dp[i] = max(dp[i], dp[j] + scores[id[i]])，当scores[id[j]] <= scores[id[i]]`
+- https://leetcode.cn/problems/count-substrings-that-differ-by-one-character/
+  - 双序列问题。`dp[i][j][k]`表示以`s[i - 1], t[j - 1]`结尾且不需要改变/需要改变一个字符的子字符串数量
+  ```cpp
+  if(s[i - 1] == t[j - 1]) {
+      dp[i][j][0] = dp[i - 1][j - 1][0] + 1;
+      dp[i][j][1] = dp[i - 1][j - 1][1];
+  }
+  else {
+      dp[i][j][1] = dp[i - 1][j - 1][0] + 1;
+  }
+  ```
+

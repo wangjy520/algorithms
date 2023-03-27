@@ -6,3 +6,7 @@
 - https://leetcode.cn/problems/binary-tree-inorder-traversal/
 - https://ac.nowcoder.com/acm/problem/20491
 - https://www.luogu.com.cn/problem/P3372
+- https://www.acwing.com/problem/content/245/
+- https://leetcode.cn/problems/queue-reconstruction-by-height/
+- https://www.nowcoder.com/questionTerminal/09066b2c010f4218adb1a1db42dbb236
+- https://leetcode.cn/problems/non-decreasing-subsequences/

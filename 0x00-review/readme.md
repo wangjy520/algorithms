@@ -53,3 +53,14 @@
     2、add(i, a[i]), add(i + 1, -a[i]);
     ```
     - 两种方式是一样的
+- https://www.acwing.com/problem/content/245/
+    - 非常好的题目
+    - 树状数组 + 二分查找
+    - 具体思路见《算法竞赛进阶指南》第209页
+- https://leetcode.cn/problems/queue-reconstruction-by-height/
+  - 暴力
+- https://www.nowcoder.com/questionTerminal/09066b2c010f4218adb1a1db42dbb236
+  - 想不明白的贪心
+- https://leetcode.cn/problems/non-decreasing-subsequences/
+  - 精妙的去重操作
+  - https://leetcode.cn/problems/non-decreasing-subsequences/solution/di-zeng-zi-xu-lie-by-leetcode-solution/
