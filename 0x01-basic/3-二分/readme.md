@@ -7,3 +7,5 @@
     - 如果`x`时间内能够完成，那么`y > x`的情况下也能够完成。固定时间，求能够修理的最多车辆数
 - https://leetcode.cn/problems/shortest-subarray-to-be-removed-to-make-array-sorted/
     - 找到前面最长的非递减子数组，从最后面的非递减子数组遍历，对第一部分二分查找应该删除的位置
+- https://leetcode.cn/problems/building-boxes/
+    - 二分答案，check函数中需要递归判断最下面有mid个方块时，有几个方块4个侧面全被包围的条件

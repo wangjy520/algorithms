@@ -1,3 +1,13 @@
 # 状压dp
 - https://leetcode.cn/contest/weekly-contest-337/problems/the-number-of-beautiful-subsets/
     - 将子集的选取状态以二进制数表示，`dp[i]`表示在状态`i`的情况是否满足条件。转移时是需要考虑任意一个为1的位置，看这个状态`i`除掉这个元素是否合法以及判断`nums[k]`和剩余的其他数字是否合法，最后统计1~(1 << n)中所有合法的状态
+- https://leetcode.cn/problems/broken-board-dominoes/
+    - 状态转移相对来说比较麻烦
+    - 因为有些位置不能防放置骨牌，所以要判断当前状态是否合法。`dp[i][j]`代表第i行的状态为j的时候最多能放置多少块骨牌，i = 0时为初始状态，因此第一行的时候i = 1。
+    - 状态转移时，假设从k转移到j， 当前判断到第i个位置：
+        - 如果j的该位置为0，那么不会防止骨牌
+        - 否则，如果k对应的该位置（即上一行）为0，如果能填（不在题目的限制中），就竖着放一块；否则只能横着放，要根据j的下一位是否能是1判断是否可以横着放，如果不可以，就返回-1
+        - 如果是1的话，也是得判断横着放就好
+- https://leetcode.cn/problems/shortest-path-visiting-all-nodes/
+    - 点对最短路预处理 + 状态压缩dp
+    - 状压的思想类似于最短汉密尔顿路径

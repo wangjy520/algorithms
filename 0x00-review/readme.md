@@ -64,3 +64,5 @@
 - https://leetcode.cn/problems/non-decreasing-subsequences/
   - 精妙的去重操作
   - https://leetcode.cn/problems/non-decreasing-subsequences/solution/di-zeng-zi-xu-lie-by-leetcode-solution/
+- https://leetcode.cn/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+  - 折半枚举 + 二分查找
