@@ -66,3 +66,9 @@
   - https://leetcode.cn/problems/non-decreasing-subsequences/solution/di-zeng-zi-xu-lie-by-leetcode-solution/
 - https://leetcode.cn/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
   - 折半枚举 + 二分查找
+- https://leetcode.cn/problems/minimum-reverse-operations/
+  - BFS + set优化
+  - 大体思路是在BFS求最短路的同时判断当前节点应该更新到哪些节点。以前做的都是提前建好图再BFS
+  - 求最小可以考虑使用BFS求最短路
+  - https://leetcode.cn/problems/minimum-reverse-operations/solution/bfstiao-yue-you-xi-jia-qiang-ban-by-tsre-juxn/
+  - 想到了BFS，但是建图的时候会TLE。原因在于有很多位置被重复的访问，而这些位置是不会再次被更新的。因为当作图来考虑的话，边权都是1，所以使用普通的BFS就能够更新了，也就是一旦某些位置被访问过了，那么就不需要再次访问

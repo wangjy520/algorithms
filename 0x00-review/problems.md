@@ -10,3 +10,4 @@
 - https://leetcode.cn/problems/queue-reconstruction-by-height/
 - https://www.nowcoder.com/questionTerminal/09066b2c010f4218adb1a1db42dbb236
 - https://leetcode.cn/problems/non-decreasing-subsequences/
+- https://leetcode.cn/problems/minimum-reverse-operations/
