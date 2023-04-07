@@ -1,0 +1,11 @@
+# 图论部分的基础模板算法
+- shorest_circle
+    - 图中的最小环
+- dijkstra
+    - 最短路
+- spfa
+    - 最短路
+- is_bipartite_bfs
+    - BFS判断二分图
+- is_bipartite_dsu
+    - DSU判断二分图

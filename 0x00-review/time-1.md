@@ -10,3 +10,8 @@
   - 求最小可以考虑使用BFS求最短路
   - https://leetcode.cn/problems/minimum-reverse-operations/solution/bfstiao-yue-you-xi-jia-qiang-ban-by-tsre-juxn/
   - 想到了BFS，但是建图的时候会TLE。原因在于有很多位置被重复的访问，而这些位置是不会再次被更新的。因为当作图来考虑的话，边权都是1，所以使用普通的BFS就能够更新了，也就是一旦某些位置被访问过了，那么就不需要再次访问
+
+
+  - https://leetcode.cn/problems/previous-permutation-with-one-swap/
+    - 求小于当前排列的最大排列
+    - 从右向左找到第一个逆序对，左边的就是要交换的元素，用右侧的最大值交换，然后将该位置右侧降序排序。本题要求只交换一次，所以不需要排序
