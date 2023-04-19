@@ -72,3 +72,5 @@
   - 求最小可以考虑使用BFS求最短路
   - https://leetcode.cn/problems/minimum-reverse-operations/solution/bfstiao-yue-you-xi-jia-qiang-ban-by-tsre-juxn/
   - 想到了BFS，但是建图的时候会TLE。原因在于有很多位置被重复的访问，而这些位置是不会再次被更新的。因为当作图来考虑的话，边权都是1，所以使用普通的BFS就能够更新了，也就是一旦某些位置被访问过了，那么就不需要再次访问
+- https://www.nowcoder.com/questionTerminal/09066b2c010f4218adb1a1db42dbb236
+    - 贪心，相邻的花可以同时种，为了最小化种花次数，尽量相邻的话一起种。先种第一个花园的，然后依次判断每个花园和前一个花园的花的数量，如果大于，那么需要额外种`a[i] - a[i - 1]`个，否则不需要额外种

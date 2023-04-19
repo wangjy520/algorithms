@@ -67,7 +67,12 @@
 - [0x10](https://www.luogu.com.cn/problem/P2345)
     - 所求的表达式中前后两项都是变化的，因此需要固定一个。对于每个位置，只考虑其前面且叫声更小的位置，那么第一项就成了定值。正反分别统计两次即可
     - 这里的树状数组用作统计符合条件的元素个数
-
+- [0x11](https://loj.ac/p/130)
+    - 板子
+- [0x12](https://loj.ac/p/131)
+    - 板子
+- [0x13](https://loj.ac/p/132)
+    - 板子
 ## 资料
 - https://www.luogu.com.cn/blog/kingxbz/shu-zhuang-shuo-zu-zong-ru-men-dao-ru-fen
 ## 总结

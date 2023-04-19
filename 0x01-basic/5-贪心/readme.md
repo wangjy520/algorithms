@@ -6,3 +6,5 @@
 - https://leetcode.cn/contest/biweekly-contest-100/problems/maximize-greatness-of-an-array/
     - 贪心 + 双指针
     - 将数组复制一份排序，对于每个数字，选择第一个大于该数字的元素，直到备份数组遍历完毕
+- https://www.nowcoder.com/questionTerminal/09066b2c010f4218adb1a1db42dbb236
+    - 贪心，相邻的花可以同时种，为了最小化种花次数，尽量相邻的话一起种。先种第一个花园的，然后依次判断每个花园和前一个花园的花的数量，如果大于，那么需要额外种`a[i] - a[i - 1]`个，否则不需要额外种
